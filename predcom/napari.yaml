@@ -1,13 +1,23 @@
 name: predcom
 display_name: Prediction Compare
 # see https://napari.org/stable/plugins/manifest.html for valid categories
-categories: ["Image Processing"]
+categories: ["Image Processing", "Annotation"]
 contributions:
   commands:
     - id: predcom.compare
-      python_name: predcom.predcomplugin.compare:main
+      python_name: predcom.predcom_plugin.compare:predict_widget
       title: Prediction Compare Plugin
+    - id: predcom.predict
+      python_name: predcom.predcom_plugin.predict:predict_widget
+      title: Prediction Compare Predcit
+    # - id: predcom.load_image
+    #   python_name: predcom.predcom_plugin.predict:load_image_widget
+    #   title: Prediction Compare Load Image
 
   widgets:
     - command: predcom.compare
       display_name: Predcom
+    - command: predcom.predict
+      display_name: Prediction New
+    # - command: predcom.load_image
+    #   display_name: Load Image

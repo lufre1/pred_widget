@@ -1,2 +1,0 @@
-[napari.manifest]
-predcom = predcom:napari.yaml
